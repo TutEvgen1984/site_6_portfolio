@@ -1,0 +1,43 @@
+:root {
+  --color-black: #000000;
+  --color-orange: #ee3d1b;
+  --color-pink: #ed4c5c;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+section {
+  padding: 95px 0;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* column-gap: 30px; */
+  /* row-gap: 30px; */
+  gap: 30px;
+}
+.img2 {
+  border-radius: 15px;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header {
+  min-height: 780px;
+  background-image: url(../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.download {
+  background-color: var(--color-pink);
+}
