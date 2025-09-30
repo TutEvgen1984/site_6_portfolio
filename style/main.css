@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   font-family: serif;
+  min-height: 3922px;
 }
 
 h1,
@@ -35,8 +36,8 @@ p {
 }
 
 .container--common {
-  box-sizing: content-box;
-  max-width: 1140px;
+  max-width: 1200px;
+  /* 1140+30+30=1200 */
   padding: 0 30px;
   margin: 0 auto;
 }
@@ -55,8 +56,6 @@ html {
 
 /* #region Header */
 
-/* #region Header Menu */
-
 .header {
   background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/Header_bg.png);
   background-repeat: no-repeat;
@@ -64,12 +63,16 @@ html {
   min-height: 782px;
 }
 
+/* #region Header Menu */
+
+.section--header-menu {}
+
 .header-menu--container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  min-height: 150px;
+  min-height: 140px;
   margin: 0 auto;
   gap: 15px;
 }
@@ -77,6 +80,7 @@ html {
 .logo {
   display: flex;
   align-items: center;
+  padding-left: 16px;
 }
 
 .logo--a {
@@ -84,6 +88,7 @@ html {
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
 
   display: block;
@@ -95,17 +100,15 @@ html {
   background-color: #ED4C5C;
 }
 
-.header__nav {
-  max-width: 625px;
-  width: 100%;
-}
+.header__nav {}
 
 .header__nav ul {
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 0px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  padding-right: 50px;
 }
 
 .header__nav-a {
@@ -131,6 +134,7 @@ html {
   border-radius: 6px;
   width: 100px;
   height: 40px;
+  margin-right: 20px;
 
   font-family: var(--font-family);
   font-weight: 400;
@@ -150,31 +154,40 @@ html {
 /* #endregion Header Menu */
 
 /* #region header content */
+.section--header-content {}
+
 .header__content {
-  padding: 0 30px;
+  padding-top: 116px;
   text-align: center;
 }
 
 .header__h1 {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 72px;
+  font-size: clamp(30px, 5vw, 72px);
+  /* 72px от 1440px это 5% */
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
+  margin-bottom: 40px;
 }
 
 .header__h2 {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.66vw;
+  /* 24px от 1440px это 1,66% */
   line-height: 150%;
   text-align: center;
   color: #fff;
+
+  margin-bottom: 55px;
+
 }
 
 .header__btn {
   border-radius: 6px;
+  border-width: 0;
   width: 160px;
   height: 50px;
   background: #fff;
@@ -189,6 +202,57 @@ html {
 /* #endregion header content */
 
 /* #endregion Header*/
+
+/* #region Section video */
+.section--video {}
+
+.video__container {
+  display: flex;
+  justify-content: center;
+  gap: 125px;
+  flex-wrap: wrap;
+
+  padding: 94px 0;
+  /* padding-right: 100px; */
+}
+
+.video__left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 450px;
+
+  padding-top: 23px;
+  padding-left: 6px;
+}
+
+.video__h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  color: #000;
+
+  margin-bottom: 47px;
+}
+
+.video__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: justify;
+  color: #000;
+
+  margin-bottom: 15px;
+}
+
+.red-color {
+  color: #ed4c5c;
+}
+
+.video__right-side {}
+
+/* #endregion Section video */
 
 
 
