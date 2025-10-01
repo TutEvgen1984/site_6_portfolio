@@ -60,6 +60,7 @@ html {
   background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/Header_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 782px;
 }
 
@@ -175,14 +176,13 @@ html {
 .header__h2 {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.66vw;
-  /* 24px от 1440px это 1,66% */
+  font-size: clamp(14px, 1.667vw, 24px);
+  /* 24px от 1440px это 1,667% */
   line-height: 150%;
   text-align: center;
   color: #fff;
 
   margin-bottom: 55px;
-
 }
 
 .header__btn {
@@ -209,7 +209,8 @@ html {
 .video__container {
   display: flex;
   justify-content: center;
-  gap: 125px;
+  column-gap: 125px;
+  row-gap: 30px;
   flex-wrap: wrap;
 
   padding: 94px 0;
@@ -254,26 +255,28 @@ html {
 
 /* #endregion Section video */
 
-
-
 /* #region Capability */
-/*Код написан автором курса
+/* Код написан автором курса */
+.section--capability {
+  min-height: 660px;
+  background: #fafafa;
+}
+
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
   width: 100%;
-  padding: 65px 165px;
+  padding: 59px 15px;
   margin: 0 auto;
 }
 
-.capability {
-  background-color: #fafafa;
-  min-height: 660px;
-}
-
-.capability h2 {
-  text-align: center;
+.section--capability h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
   font-size: 36px;
-  margin-bottom: 65px;
+  text-align: center;
+  color: #000;
+
+  margin-bottom: 75px;
 }
 
 .capability__grid {
@@ -313,26 +316,46 @@ html {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 30px;
+  padding-top: 23px;
+  padding-bottom: 25px;
   text-align: center;
 
   max-width: 290px;
   width: 100%;
-  top: 150px;
+  top: 158px;
 }
 
 .capability__inside h3 {
+  font-family: var(--font-family);
+  font-weight: 500;
   font-size: 18px;
+  text-align: center;
+  color: #101010;
+
+  padding-bottom: 17px;
 }
 
 .capability__inside p {
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #101010;
+
+  margin-bottom: 15px;
 }
 
 .capability__inside a {
   text-decoration: none;
-  color: #ed4c5c;
   transition: 0.3s all;
+
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #ed4c5c;
 }
 
 .capability__inside a:hover {
@@ -341,7 +364,7 @@ html {
 
 @media screen and (max-width: 1440px) {
   .container {
-    padding: 65px 15px;
+    padding: 59px 15px;
   }
 }
 
@@ -379,6 +402,72 @@ html {
   .capability__grid {
     row-gap: 100px;
   }
-}*/
+}
 
 /* #endregion Capability */
+
+/* #region Section features */
+.section--features {
+  min-height: 500px;
+}
+
+.features__h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  color: #000;
+
+  padding-top: 69px;
+  margin-bottom: 63px;
+}
+
+.features__items-container {
+  display: flex;
+  justify-content: center;
+  gap: 95px;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  position: relative;
+  text-align: center;
+}
+
+.features__item--digits {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 100px;
+  text-align: center;
+  color: rgba(16, 16, 16, 0.08);
+
+  margin-bottom: 10px;
+}
+
+.features__item--icon {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features__item--h4 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #101010;
+
+  margin-bottom: 10px;
+}
+
+.features__item--p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  max-width: 190px;
+}
+
+/* #endregion Section features */
