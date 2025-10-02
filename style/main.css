@@ -409,6 +409,7 @@ html {
 /* #region Section features */
 .section--features {
   min-height: 500px;
+  padding-bottom: 70px;
 }
 
 .features__h2 {
@@ -471,3 +472,120 @@ html {
 }
 
 /* #endregion Section features */
+
+/* #region Section download */
+.section--download {
+  min-height: 500px;
+  background: #ed4c5c;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.download__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 125px;
+  row-gap: 30px;
+
+}
+
+.download__left-side {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.download__h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.download__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: justify;
+  color: #fff;
+
+  margin-bottom: 45px;
+}
+
+.download__icons {}
+
+.download__icon1 {
+  margin-right: 17px;
+}
+
+.download__icon2 {}
+
+.download__right-side {
+  /* padding-right: 95px; */
+}
+
+/* #endregion Section download */
+
+/* #region Section contact us */
+.section--contact-us {
+  min-height: 500px;
+  background-color: #b69a9a;
+}
+
+.contact-us__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 160px;
+  column-gap: 125px;
+}
+
+.contact-us__left-side {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contact-us-h2 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  color: #000;
+}
+
+.contact-us__p {
+  max-width: 445px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: justify;
+  color: #000;
+}
+
+.contact-us__right-side {}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us__input {
+  width: 100%;
+  max-width: 540px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  height: 60px;
+}
+
+.contact-us__btn {
+  width: 160px;
+  height: 50px;
+}
+
+/* #endregion Section contact us */
