@@ -568,17 +568,22 @@ html {
   color: #000;
 }
 
-.contact-us__right-side {}
+.contact-us__right-side {
+  max-width: 540px;
+}
 
 .contact-us__form {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+
+  /* Это свойство указывает, может ли вырастать флекс-элемент при наличии свободного места, и насколько. По умолчанию значение равно 0. Значением может быть любое положительное целое число (включая 0).
+  Если у всех флекс-элементов будет прописано flex-grow: 1, то свободное пространство в контейнере будет равномерно распределено между всеми. */
 }
 
 .contact-us__input {
-  width: 100%;
   max-width: 540px;
-  border: 1px solid #333;
+  border: 5px solid #333;
   border-radius: 6px;
   height: 60px;
 }
