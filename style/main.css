@@ -479,6 +479,8 @@ html {
   background: #ed4c5c;
   padding-top: 95px;
   padding-bottom: 95px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .download__container {
@@ -541,14 +543,17 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 160px;
+  padding-top: 152px;
+  padding-bottom: 152px;
   column-gap: 125px;
+  row-gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .contact-us__left-side {
   display: flex;
   flex-direction: column;
-
 }
 
 .contact-us-h2 {
@@ -556,6 +561,7 @@ html {
   font-weight: 500;
   font-size: 36px;
   color: #000;
+  margin-bottom: 70px;
 }
 
 .contact-us__p {
@@ -568,29 +574,79 @@ html {
   color: #000;
 }
 
-.contact-us__right-side {
-  max-width: 540px;
-}
-
-.contact-us__form {
+.contact-us__right-side--form {
+  /* адаптивная форма: форму не оборачиваем во внешний div иначе работать не будет, max-width и width100% применяем к самой форме, а не к input'ам */
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-
-  /* Это свойство указывает, может ли вырастать флекс-элемент при наличии свободного места, и насколько. По умолчанию значение равно 0. Значением может быть любое положительное целое число (включая 0).
-  Если у всех флекс-элементов будет прописано flex-grow: 1, то свободное пространство в контейнере будет равномерно распределено между всеми. */
+  max-width: 540px;
+  width: 100%;
+  gap: 24px;
 }
 
 .contact-us__input {
-  max-width: 540px;
-  border: 5px solid #333;
-  border-radius: 6px;
   height: 60px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(19, 39, 67, 0.5);
+  padding-left: 30px;
+
+  border: 1px solid #333;
+  border-radius: 6px;
 }
 
 .contact-us__btn {
   width: 160px;
   height: 50px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+
+  border: 1.50px solid #ed4c5c;
+  border-radius: 6px;
+  background: #ed4c5c;
 }
 
 /* #endregion Section contact us */
+
+/* #region Footer */
+.footer {
+  padding: 25px 0;
+}
+
+.footer__container {
+  max-width: 1163px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer__h3 {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #101010;
+
+  margin-bottom: 20px;
+}
+
+.footer__address {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #101010;
+  font-style: normal;
+
+  margin-bottom: 45px;
+}
+
+.footer__copyright {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: #101010;
+}
+
+/* #endregion Footer */
